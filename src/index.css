@@ -63,6 +63,23 @@
   --font-mono: var(--font-sometype-mono);
 }
 
+/* Custom shadow utilities */
+.shadow-success {
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+}
+
+.shadow-success-hover {
+  box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
+}
+
+.shadow-destructive {
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
+}
+
+.shadow-destructive-hover {
+  box-shadow: 0 8px 30px rgba(239, 68, 68, 0.4);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -105,4 +122,20 @@ body {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Toast slide-up animation */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
 }
