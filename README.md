@@ -10,14 +10,16 @@ A comprehensive React + TypeScript application showcasing solutions to three cod
 
 This project contains solutions to three distinct programming challenges:
 
-### Problem 1: Sum to N 🔢
+### 🔣 Problem 1: Three ways to sum to n
+
 - **Interactive Algorithm Implementation**: Three different approaches to calculate sum from 1 to n
 - **Mathematical Formula**: O(1) solution using `n * (n + 1) / 2`
 - **Iterative Solution**: Traditional loop-based approach
 - **Recursive Solution**: Functional programming approach with proper error handling
 - **Features**: Real-time testing, syntax highlighting, error handling for edge cases
 
-### Problem 2: Currency Swap Form 💱
+### 🍭 Problem 2: Fancy Form
+
 - **Live Token Data**: Fetches real-time prices from Switcheo API
 - **Interactive Interface**: Click-to-select tokens from available list
 - **Real-time Calculations**: Automatic exchange rate computation
@@ -26,7 +28,8 @@ This project contains solutions to three distinct programming challenges:
 - **Token Icons**: Switcheo token repository integration with fallback badges
 - **Responsive Design**: Mobile-friendly interface
 
-### Problem 3: React Code Analysis 🤢
+### 🤢 Problem 3: Messy React
+
 - **Code Review Task**: Detailed analysis of messy React/TypeScript code
 - **Issue Identification**: Comprehensive breakdown of logic errors, TypeScript issues, performance problems, and anti-patterns
 - **Solution Provided**: Complete refactored version with explanations
@@ -52,18 +55,21 @@ This project contains solutions to three distinct programming challenges:
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - pnpm (recommended) or npm
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Firdenon/test-99tech.git
    cd test-99tech
    ```
 
 2. **Install dependencies**
+
    ```bash
    pnpm install
    # or
@@ -71,6 +77,7 @@ This project contains solutions to three distinct programming challenges:
    ```
 
 3. **Start development server**
+
    ```bash
    pnpm dev
    # or
@@ -113,6 +120,7 @@ src/
 ## 🎯 Key Features Implemented
 
 ### Problem 1 Highlights
+
 - ✅ Three different algorithmic approaches
 - ✅ Interactive testing interface
 - ✅ Syntax highlighting for code display
@@ -120,6 +128,7 @@ src/
 - ✅ Performance comparison between approaches
 
 ### Problem 2 Highlights
+
 - ✅ Real-time token price fetching
 - ✅ Interactive token selection
 - ✅ Live exchange rate calculations
@@ -129,6 +138,7 @@ src/
 - ✅ Mobile-responsive design
 
 ### Problem 3 Highlights
+
 - ✅ Detailed code analysis with 15+ issues identified
 - ✅ Complete refactored solution
 - ✅ Syntax highlighted code blocks
@@ -166,9 +176,9 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       // Other configs...
 
@@ -183,40 +193,40 @@ export default defineConfig([
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
   },
-])
+]);
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from "eslint-plugin-react-x";
+import reactDom from "eslint-plugin-react-dom";
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       // Other configs...
       // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
+      reactX.configs["recommended-typescript"],
       // Enable lint rules for React DOM
       reactDom.configs.recommended,
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
   },
-])
+]);
 ```
