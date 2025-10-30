@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark theme colors */
+  --background: #020f16;
+  --foreground: #eeeeee;
+  --primary: #64a4c4;
+  --secondary: #476072;
+  --accent: #6b9dc8;
+  --muted: #5a7a8a;
+  --border: #476072;
+  --card: #3a4a5c;
+  --card-foreground: #eeeeee;
+  --popover: #3a4a5c;
+  --popover-foreground: #eeeeee;
+  --destructive: #ef4444;
+  --destructive-foreground: #eeeeee;
+  --ring: #64a4c4;
+  --input: #476072;
+  --input-foreground: #eeeeee;
+
+  /* Additional complementary colors */
+  --surface: #2a3441;
+  --surface-variant: #404c5c;
+  --outline: #5a6b7a;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-input-foreground: var(--input-foreground);
+  --color-surface: var(--surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-outline: var(--outline);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --font-sans: var(--font-sometype-mono);
+  --font-mono: var(--font-sometype-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sometype-mono), monospace;
+  overflow-x: hidden;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Luminous cursor effect */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    1000px circle at var(--x, 0) var(--y, 0),
+    rgba(84, 140, 168, 0.10) 0%,
+    rgba(84, 140, 168, 0.06) 20%,
+    rgba(84, 140, 168, 0.03) 30%,
+    transparent 90%
+  );
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.cursor-glow.active {
+  opacity: 1;
+}
+
+/* Keep some basic focus styles for accessibility */
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
